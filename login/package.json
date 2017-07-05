@@ -1,0 +1,13 @@
+{
+  "name":"travel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "author": "linxiaoxin",
+  "license": "ISC",
+  "contributes": {
+  },
+  "scripts": {
+    
+  }
+}

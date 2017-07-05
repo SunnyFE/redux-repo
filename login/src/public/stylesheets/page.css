@@ -1,0 +1,24 @@
+.h-hide{
+  display: none!important;
+}
+
+.h-page-wrapper {
+    margin: 0 auto;
+    min-width: 320px;
+    min-height: 480px;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.h-page-wrapper.active{
+  z-index: 10;
+}
+
+.h-header-wrapper, .h-page-header-wrapper {
+    height: 50px;
+}
