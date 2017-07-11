@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <% if (keywords){ %><meta name="keywords" content="<%= keywords%>"><% } %>
+    <% if (description){ %><meta name="description" content="<%= description%>"><% } %>
+    <% if (title){ %><meta name="title" content="<%= title%>"><% } %>
+    <meta name="version" content="{VERSION}" crocodile='true' />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 启用 WebApp 全屏模式 -->
+    <!--隐藏状态栏/设置状态栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="apple-mobile-web-app-title" content="永安旅遊">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" type="text/css" href="<%= resourceDomain %>/cui/css/crocodile.css?v=<%= VERSION %>">
+
+  </head>
+  <body>
+    <div id="appdownload"></div>
+    <div id="headerview" class="headerview">
+    </div>
+    <div id="main" class="mainview">
+      <div id="root" class="main-viewport">
+      </div>
+    </div>
+    <div id="popup-view"></div>
+
+    <!-- Google Tag Manager BEGIN -->
+    <div class="hidden" id="ga_keyword"></div>
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-N3645R" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <!-- 修改了Google的原始代碼 j.src = '//' + c + '?id=' + i + dl 改為 var sign = c.indexOf('?') >= 0 ? '&' : '?'; j.src = '//' + c + sign + 'id=' ;為了修復 打包時 uglify-cshtml.js 附加的 ?v=xxx 導致的URL 404 問題-->
+    <script>
+      window._wgGtm = function (w, d, s, l, i) { var protocol = (window.location.protocol.indexOf("https") > -1) ? "https" : "http"; w = w || window, d = d || document, s = s || 'script', l = l || 'dataLayer', i = i || 'GTM-N3645R', c = 'www.googletagmanager.com/gtm.js'; $('script[src*="' + c + '"]').remove(); w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; var sign = c.indexOf('?') >= 0 ? '&' : '?'; j.src = protocol + '://' + c + sign + 'id=' + i + dl + '&t=' + Date.now(); f.parentNode.insertBefore(j, f); };
+    </script>
+    <!-- Google Tag Manager END -->
+
+    <script type="text/javascript" src="<%= domain %>crocodile/crocodile.seed.js?v=<%= VERSION %>"></script>
+    <script type="text/javascript" src="../dist/index.js"></script>
+  </body>
+</html>

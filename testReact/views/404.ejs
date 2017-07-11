@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>頁面找不到了——Wing On Travel 永安旅遊無線官網</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body{
+            font-family:'Microsoft JhengHei','Microsoft YaHei','Arial';
+            margin:0;
+            padding:50px 20px;
+        }
+        img{
+            display:block;
+            margin:0 auto;
+        }
+        .not-found {
+            margin-top:40px;
+            width:80%;
+        }
+        .alert {
+            font-size:14px;
+            line-height:150%;
+            text-align:center;
+        }
+        .btn{
+            display:block;
+            padding:10px 0;
+            margin:30px auto 0 auto;
+            width:150px;
+            text-align:center;
+            text-decoration:none;
+            background-color:#17a2dd;
+            border:none;
+            font-size:16px;
+            font-weight:normal;
+            color:#FFFFFF;
+        }
+        .lt-square {
+            display:inline-block;
+            width: 10px;
+            height: 10px;
+            border-bottom: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="http://m.wingontravel.com/style/img/ilogo.png" />
+    <img src="http://m.wingontravel.com/style/img/bg-404.png" class="not-found" />
+    <p class="alert">您所要瀏覽的網頁並不存在，可能是輸入錯誤或鏈接已經刪除。請查閱我們網站的其他部分。</p>
+    <a href="#" class="btn" id="btn-back"><span class="lt-square"></span>&nbsp;返回首頁</a>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('btn-back').setAttribute("href", location.origin + '/package');
+        };
+    </script>
+    <script src="http://m.wingontravel.com/javascripts/track.js"></script>
+    <script type="text/javascript">
+        wingonTrack.google();
+        wingonTrack.cuckoo('404', 'Package H5 404頁面<%= url %>');
+    </script>
+
+</body>
+</html>
