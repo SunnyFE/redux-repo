@@ -1,0 +1,12 @@
+node_modules*/
+.happypack
+/.vscode/launch.json
+build/.*
+build/*.log
+build/unit-test
+build/user-config/user-config.js
+crocodile/
+dist/
+webapp/
+temp/
+/npm-debug.log

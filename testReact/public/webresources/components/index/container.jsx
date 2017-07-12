@@ -12,6 +12,7 @@ export default class IndexContainer extends Component {
                 <h3>{name}</h3>
                 <br />
                 <i>{description}</i>
+                <i>{name}</i>
             </li>
         )
     }

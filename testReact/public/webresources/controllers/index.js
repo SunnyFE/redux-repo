@@ -23,8 +23,14 @@ class WrapperComponent extends Component {
         super()
     }
 
+    componentWillMount(){
+        this.setState({
+            books:this.props.books
+        })
+    }
+
     render() {
-        const books = this.props.books
+        const { books } = this.state
 
         return (
             <div>
@@ -37,11 +43,13 @@ class WrapperComponent extends Component {
     changeBooks({ description = '', name = '' }) {
         let book = {
             id: randomKey(),
-            name: name,
-            description: description
+            name: `${randomKey()}_test`,
+            description: `${randomKey()}`
         }
 
-        this.props.books = [book]
+        this.setState({
+            books:[book]
+        })
     }
 }
 

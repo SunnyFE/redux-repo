@@ -1,10 +1,7 @@
-require('babel-core/register')( {presets: ['react'] })
-
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
-const {PORTS} = require('../lib/constants')
 
 let routes = require('./routes/index');
 let app = express();
